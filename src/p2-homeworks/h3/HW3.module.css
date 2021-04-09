@@ -1,0 +1,9 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    height: 100px;
+    background-color: lightsteelblue;
+}

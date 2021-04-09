@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react'
 
 export const PATH = {
-    PRE_JUNIOR: "/pre-junior",
+    PRE_JUNIOR: '/pre-junior',
     // add paths
 }
 
@@ -11,11 +11,11 @@ function Routes() {
             {/*Switch выбирает первый подходящий роут*/}
             {/*<Switch>*/}
 
-            {/*в начале мы попадаем на страницу "/" и переходим сразу на страницу PRE_JUNIOR*/}
-            {/*exact нужен чтоб указать полное совподение (что после "/" ничего не будет)*/}
-            {/*<Route path={"/"} exact render={() => <Redirect to={PRE_JUNIOR}/>}/>*/}
+            {/*в начале мы попадаем на страницу '/' и переходим сразу на страницу PRE_JUNIOR*/}
+            {/*exact нужен чтоб указать полное совподение (что после '/' ничего не будет)*/}
+            {/*<Route path={'/'} exact render={() => <Redirect to={PATH.PRE_JUNIOR}/>}/>*/}
 
-            {/*<Route path={PRE_JUNIOR} render={() => <PreJunior/>}/>*/}
+            {/*<Route path={PATH.PRE_JUNIOR} render={() => <PreJunior/>}/>*/}
                 // add routes
 
             {/*у этого роута нет пути, он отрисуется если пользователь захочет попасть на несуществующую страницу*/}
@@ -23,7 +23,7 @@ function Routes() {
 
             {/*</Switch>*/}
         </div>
-    );
+    )
 }
 
-export default Routes;
+export default Routes

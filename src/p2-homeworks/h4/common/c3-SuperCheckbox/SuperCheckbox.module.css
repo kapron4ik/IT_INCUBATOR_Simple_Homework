@@ -1,7 +1,49 @@
-.checkbox {
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
 
+/*.checkbox {*/
+
+/*}*/
+
+/*.spanClassName {*/
+
+/*}*/
+
+.checkbox { display: none; }
+
+.checkbox + .spanClassName {
+    margin-top: 15px;
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 20px;
+    font: 20px 'Open Sans', Arial, sans-serif;
+    color: #38393e;
+    cursor: pointer;
 }
 
-.spanClassName {
+.checkbox + .spanClassName:last-child { margin-bottom: 0; }
 
+.checkbox + .spanClassName:before {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #38393e;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: .6;
+    transition: all .12s, border-color .08s;
+}
+
+.checkbox:checked + .spanClassName:before {
+    width: 10px;
+    top: -5px;
+    left: 5px;
+    border-radius: 0;
+    opacity: 1;
+    border: 2px solid #009002;
+    border-top-color: transparent;
+    border-left-color: transparent;
+    transform: rotate(45deg);
 }
