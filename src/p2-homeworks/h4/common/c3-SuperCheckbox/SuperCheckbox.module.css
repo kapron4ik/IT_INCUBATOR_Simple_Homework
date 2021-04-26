@@ -1,13 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
 
-/*.checkbox {*/
-
-/*}*/
-
-/*.spanClassName {*/
-
-/*}*/
-
 .checkbox { display: none; }
 
 .checkbox + .spanClassName {
@@ -47,3 +39,4 @@
     border-left-color: transparent;
     transform: rotate(45deg);
 }
+

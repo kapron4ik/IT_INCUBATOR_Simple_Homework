@@ -1,5 +1,8 @@
 import React from "react";
 import {AffairType} from "./HW2";
+import SuperCheckbox from "../h4/common/c3-SuperCheckbox/SuperCheckbox";
+import SuperButton from "../h4/common/c2-SuperButton/SuperButton";
+import s from "./Affair.module.css"
 
 type AffairPropsType = {
     // key не нужно типизировать
@@ -13,12 +16,16 @@ function Affair(props: AffairPropsType) {
     };// need to fix
 
     return (
-        <div>
+        <div className={s.wrapper}>
             {/*// show some text*/}
-            <input type="checkbox"/>
-            <span>{props.affair.name} - </span>
-            <span>{props.affair.priority} </span>
-            <button onClick={deleteCallback}>X</button>
+            <SuperCheckbox            >
+                {props.affair.name} - {props.affair.priority}
+            </SuperCheckbox>
+            <SuperButton red onClick={deleteCallback}>X</SuperButton>
+            {/*<input type="checkbox"/>*/}
+            {/*<span>{props.affair.name} - </span>*/}
+            {/*<span>{props.affair.priority} </span>*/}
+            {/*<button onClick={deleteCallback}>X</button>*/}
         </div>
     );
 }

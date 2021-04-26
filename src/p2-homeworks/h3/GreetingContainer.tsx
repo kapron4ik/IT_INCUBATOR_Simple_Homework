@@ -1,6 +1,9 @@
 import React, {ChangeEvent, useState} from "react";
 import Greeting from "./Greeting";
 import {UserType} from "./HW3";
+import SuperInputText from "../h4/common/c1-SuperInputText/SuperInputText";
+import SuperButton from "../h4/common/c2-SuperButton/SuperButton";
+import s from "./Greeting.module.css";
 
 type GreetingContainerPropsType = {
     users: Array<UserType> // need to fix any
@@ -38,13 +41,25 @@ const GreetingContainer: React.FC<GreetingContainerPropsType> = ({users, addUser
 
 
     return (
-        <Greeting
-            name={name}
-            setNameCallback={setNameCallback}
-            addUser={addUser}
-            error={error}
-            totalUsers={totalUsers}
-        />
+        <div className={s.wrapper}>
+            {/*<Greeting*/}
+            {/*    name={name}*/}
+            {/*    setNameCallback={setNameCallback}*/}
+            {/*    addUser={addUser}*/}
+            {/*    error={error}*/}
+            {/*    totalUsers={totalUsers}*/}
+            {/*/>*/}
+            <SuperInputText
+                value={name}
+                error={error}
+                onChange={setNameCallback}
+            />
+            <SuperButton onClick={addUser}>
+                add
+            </SuperButton>
+            <span className={s.counter}>{totalUsers}</span>
+        </div>
+
     );
 }
 

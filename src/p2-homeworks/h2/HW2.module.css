@@ -3,7 +3,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /*width: 250px;*/
-    height: 200px;
     background-color: #91c0fc;
+    padding-bottom: 20px;
 }
